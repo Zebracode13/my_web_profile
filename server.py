@@ -26,7 +26,7 @@ def email_sumb():
         write_to_db(data)
         return redirect('./thanksYou.html')
     else:
-        return "Something went wrong while send! OOHHHo"
+        return "Something went wrong while sending! OOHHHo"
 
 
 app.run(debug=True)
