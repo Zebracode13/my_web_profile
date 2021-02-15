@@ -11,15 +11,15 @@ def write_to_db(data):
         csv_writter = csv.writer(database, delimiter='|', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         csv_writter.writerow([name, email, subejct, message])
 
-@app.route('/')
+@root.route('/')
 def home():
     return render_template('./index.html')
 
-@app.route('/<string:page_name>')
+@root.route('/<string:page_name>')
 def html_pages(page_name):
     return render_template(page_name)
 
-@app.route('/submit_form', methods=["GET", "POST"])
+@root.route('/submit_form', methods=["GET", "POST"])
 def email_sumb():
     if request.method == "POST":
         data = request.fo
