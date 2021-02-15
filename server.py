@@ -22,7 +22,7 @@ def html_pages(page_name):
 @root.route('/submit_form', methods=["GET", "POST"])
 def email_sumb():
     if request.method == "POST":
-        data = request.fo
+        data = request.form.to_dic()
         write_to_db(data)
         return redirect('./thanksYou.html')
     else:
