@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import csv
-app = Flask(__name__)
+root = Flask(__name__)
 
 def write_to_db(data):
     with open('database.csv', newline='', mode='a') as database:
@@ -29,4 +29,4 @@ def email_sumb():
         return "Something went wrong while sending! OOHHHo"
 
 
-app.run(debug=True)
+root.run(debug=True)
