@@ -29,4 +29,4 @@ def email_sumb():
         return "Something went wrong while sending! OOHHHo"
 
 
-app.run()
+app.run(debug=True)
