@@ -46,14 +46,18 @@
     </div>
   </nav>
 </header>
-<!-- Add your site or app content here -->
-  <form action="" method="post" class="">
-    {% if name  %}
-      <h1>Thnak you {{name}},<br>
-      <span id="typed-strings">
+<body>
+  {% if username  %}
+  <!-- Add your site or app content here -->
+    <form action="submit_form" method="get" class="">
+      <h1>Thnak you {{username}},<br>
       <span>I will get back with you soon!</span>
-    {% endif  %}
-  </form>
+    </form>
+  {% else  %}
+    <h1>Thnak you,<br>
+    <span>I will get back with you soon!</span>  
+  {% endif  %}
+</body>
   
   <script>
     document.addEventListener("DOMContentLoaded", function (event) {
