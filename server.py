@@ -22,9 +22,12 @@ def html_pages(page_name):
 @root.route('/submit_form', methods=["GET", "POST"])
 def email_sumb():
     if request.method == "POST":
-        data = request.form.to_dict()
-        write_to_db(data)
-        return redirect('./thanksYou.html')
+        try:
+            data = request.form.to_dict()
+            write_to_db(data)
+            return redirect('./thanksYou.html')
+        except:
+            "Did not save to database"
     else:
         return "Something went wrong while sending! OOHHHo"
 

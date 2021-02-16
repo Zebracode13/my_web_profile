@@ -47,26 +47,14 @@
   </nav>
 </header>
 <!-- Add your site or app content here -->
-  <div class="hero-full-container background-image-container black-text-container")>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="hero-full-wrapper">
-              <div class="text-content">
-                <h1>Thnak you,<br>
-                  <span id="typed-strings">
-                    <span>I will get back with you soon!</span>
-
-                  </span>
-                  <span id="typed"></span>
-                </h1>
-              </div>
-            </div>
-          </div>
-         </div>
-    </div>
-  </div>
+  <form action="" method="post" class="">
+    {% if name  %}
+      <h1>Thnak you {{name}},<br>
+      <span id="typed-strings">
+      <span>I will get back with you soon!</span>
+    {% endif  %}
+  </form>
+  
   <script>
     document.addEventListener("DOMContentLoaded", function (event) {
       type();
